@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+printf "\n\n"
+printf "\033[1;33mBuilding 100m-row-challenge image...\033[0m"
+printf "\n\n"
+docker build --no-cache=true . -f Dockerfile -t 100m-row-challenge
+docker run --name 100m-row-challenge-builder --rm -it 100m-row-challenge php -v
+
